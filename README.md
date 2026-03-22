@@ -1,22 +1,22 @@
-# disaster-management-system
 Project Title: Student Innovation in Disaster Management
 
 Problem Statement: SIH1527
 
 Description:
-This project is a basic disaster management system prototype.
-Users can check disaster alerts by entering their location and send an SOS emergency request.
+This project is a disaster management system that provides alerts, emergency SOS, and disaster reporting.
 
-Implemented Features (10-20%):
-1. Disaster alert check
+Implemented Features (45%):
+1. Disaster alert system
 2. SOS emergency request
+3. Disaster reporting system
+4. Basic geolocation detection
+5. Local storage for saving reports
 
-Technology Used:
-HTML
-CSS
-JavaScript
+Technologies Used:
+HTML, CSS, JavaScript
 
 Future Enhancements:
-1. Real-time disaster alerts
-2. GPS location detection
-3. Rescue team notification system
+- Real-time API integration
+- Google Maps
+- Backend database
+- Admin dashboard
