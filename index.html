@@ -1,21 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Disaster Alert System</title>
+<title>Disaster Management System</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+.container{
+margin-top:50px;
+}
+
+input, select{
+padding:10px;
+margin:5px;
+width:220px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+#alertBox{
+font-size:18px;
+color:blue;
+}
+
+.box{
+background:white;
+padding:20px;
+margin:20px auto;
+width:300px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+</style>
+
 </head>
 
-<body style="text-align:center; font-family:Arial;">
+<body>
 
 <h1>Disaster Management System</h1>
 
-<input type="text" id="location" placeholder="Enter your location">
+<div class="container">
 
-<br><br>
-
+<!-- Alert Section -->
+<div class="box">
+<h3>Check Disaster Alert</h3>
+<input type="text" id="location" placeholder="Enter location">
+<br>
+<button onclick="getLocation()">Auto Detect</button>
 <button onclick="checkAlert()">Check Alert</button>
-<button onclick="sendSOS()">SOS Emergency</button>
+<p id="alertBox"></p>
+</div>
 
-<h3 id="alertBox"></h3>
+<!-- SOS Section -->
+<div class="box">
+<h3>Emergency SOS</h3>
+<button onclick="sendSOS()">Send SOS</button>
+<p id="sosMsg"></p>
+</div>
+
+<!-- Report Section -->
+<div class="box">
+<h3>Report Disaster</h3>
+
+<select id="type">
+<option value="">Select Disaster</option>
+<option>Flood</option>
+<option>Fire</option>
+<option>Earthquake</option>
+<option>Cyclone</option>
+</select>
+
+<br>
+
+<input type="text" id="reportLocation" placeholder="Enter location">
+
+<br>
+
+<button onclick="submitReport()">Submit Report</button>
+
+<p id="reportMsg"></p>
+
+</div>
+
+</div>
 
 <script src="script.js"></script>
 
